@@ -65,17 +65,14 @@ my_count_func(start_number = int(input("enter start number: ")), stop_number = i
 my_cycle_func(my_list = [1, 2], iteration = int(input("enter iteration: "))) 
 
 # 7
+import math 
 def fibo_gen(number):
-    count = 1
-    while count <= number:
-        yield count
-        count += 1
-i = 1
-my_fifteen = []
-for el in fibo_gen(5):
-    if i > 15:
-        break
-    else:
-        my_fifteen.append(el)
-        i += 1
-print(my_fifteen)
+    for item in count(1):
+        if number>=item:
+            print(number)
+            yield factorial(item)
+        else:
+            break
+
+for el in fibo_gen(10):
+    print(el)
